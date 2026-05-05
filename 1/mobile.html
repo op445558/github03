@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>名爵应用下载</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/mobile.css?v=20231117164802" />
+    <link type="image/x-icon" href="./img/icon.png?v=20231117164802" rel="icon" />
+    <link rel="shortcut icon" sizes="192x192" href="./img/icon.png?v=20231117164802" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./img/icon.png?v=20231117164802" />
+    <script src="./js/loading-component.js"></script>
+    <style type="text/css">
+        .loading-box {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            background-color: #fff;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 9999999;
+        }
+
+        .room-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            z-index: 10;
+        }
+
+        .hjh {
+            color: #ff663b;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 15px 0;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+    </style>
+    <!-- js -->
+    <script type="text/javascript">
+        // 判断pc h5
+        var isPhone = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+        if (window.location.href.indexOf('mobile') !== -1) {
+            if (window.innerWidth > 750) {
+                window.location.href = "./index.html"
+            }
+        } else {
+            if (window.innerWidth < 750) {
+                window.location.href = "./mobile.html"
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        window["document"]["write"]('<div class="loading-box" id="loading-box"><div id="loading" class="loading_index"></div></div>');
+        document.addEventListener('DOMContentLoaded', () => {
+            window.LoadingRef = new window.LoadingComponent({
+                loading: true,
+                size: 125,
+                startDeg: 1.5,
+                endDeg: 3.5,
+                innerLineDash: false,
+                counterclockwise: false,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <img class="logo" src="img/logo.png" />
+        <div class="room-number">房间号: <span class="hjh">222780</span></div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/1.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/2.webp" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/3.webp" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="bottom">
+            <!-- <div class="button" onclick="download()">下载APP</div>
+				<div class="button" onclick="openFn()">进入导航网</div> -->
+            <a class="button" id="dfDown" href="javascript:;">下载APP</a>
+            <a class="button" id="iosDown" href="javascript:;">下载APP</a>
+            <a class="button" target="_blank" id="androidDown" href="javascript:;">下载APP</a>
+            <a class="button" id="androidDowns">下载APP</a>
+            <a class="button" target="_blank" href="../h5/index.html">进入导航网</a>
+            <img src="./img/bottom.png" onclick="showDialog()" />
+        </div>
+        <div class="copyright">
+            &copy; 2026 名爵APP 版权所有<br>名爵mj98官网，名爵mj98网页导航，mj98vip名爵导航
+        </div>
+    </div>
+    <div class="modal1-mark"></div>
+    <div class="modal1">
+        <header>
+            <span class="type">请选择安装版本</span>
+            <a class="close-icon">×</a>
+        </header>
+        <section>
+            <div class="btns">
+                <a href="javascript:;" id="ios-qiyesign">
+            <span>iOS企业版</span>
+          </a>
+                <a href="javascript:;" id="ios-qiyesign2">
+            <span>iOS企业版2</span>
+          </a>
+                <a href="javascript:;" target="_blank" id="ios-supersign">
+            <span>iOS超级签</span>
+          </a>
+                <a class="ios-test-two">
+            <span>永久企业签</span>
+            <span class="notext">不掉签</span>
+            <img class="hot" src="./img/hot.png">
+          </a>
+                <a id="ios-tf">
+            <span>iOS TF签</span>
+          </a>
+            </div>
+        </section>
+    </div>
+    <div class="modal2-mark"></div>
+    <div class="modal2">
+        <header>
+            <span class="type">提示</span>
+            <a class="close-icon1">×</a>
+        </header>
+        <section>
+            <div>努力开发中，敬请期待</div>
+        </section>
+    </div>
+
+    <div class="modal3-mark"></div>
+    <div class="modal3">
+        <header>
+            <span class="type">请选择下载链接</span>
+            <a class="close-icon3">×</a>
+        </header>
+        <section>
+            <div class="btns" id="androidDownBtn">
+            </div>
+        </section>
+    </div>
+
+    <!-- 底部弹框 -->
+    <div class="dialog" id="dialog">
+        <div id="dialogBg" class="bg" onclick="hideDialog()"></div>
+        <div id="dialogCenter" class="center">
+            <div class="line"></div>
+            <!-- 安卓步骤 -->
+            <div class="imgModel" id="androidImg">
+                <div class="teachTitle">安卓安装教程</div>
+                <img src="./img/android-content.webp" />
+            </div>
+            <!-- ios步骤 -->
+            <div class="imgModel" id="iosImg">
+                <div class="teachTitle">苹果安装教程</div>
+                <img src="./img/ios-content.webp" />
+            </div>
+            <div class="imgModel" id="iosImg1">
+                <div class="teachTitle">苹果安装教程</div>
+                <img src="./img/ios-super.jpg" />
+            </div>
+            <div class="imgModel" id="iosTf">
+                <div class="test">
+                    <h4>
+                        <img src="./img/test/title.png?_=20210526021546" alt="">
+                    </h4>
+                    <div class="box">
+                        <div class="topnum">
+                            <span class="yd">
+                  <i class="q"></i>
+                  <i class="z"></i>
+                  <i class="s"></i>
+                </span>
+                            <span class="num-text">第一步</span>
+                            <span class="yd">
+                  <i class="s"></i>
+                  <i class="z"></i>
+                  <i class="q"></i>
+                </span>
+                        </div>
+                        <h3>下载TestFlight</h3>
+                        <a target="_blank" href="https://apps.apple.com/cn/app/testflight/id899247664" class="button ios-test">
+                点击下载TestFlight
+              </a>
+                        <h4>点击页面中的“在App Store中查看”去下载</h4>
+                        <div class="img">
+                            <img src="./img/test/1.png?_=20210526021546" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="topnum">
+                            <span class="yd">
+                  <i class="q"></i>
+                  <i class="z"></i>
+                  <i class="s"></i>
+                </span>
+                            <span class="num-text">第二步</span>
+                            <span class="yd">
+                  <i class="s"></i>
+                  <i class="z"></i>
+                  <i class="q"></i>
+                </span>
+                        </div>
+                        <h3>在TestFlight中下载名爵</h3>
+                        <a target="_blank" class="button" id="ios-test">
+                点击下载名爵
+              </a>
+                        <h4>点击页面中的“开始测试”</h4>
+                        <div class="img">
+                            <img src="./img/test/2.png?_=20210526021546" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="topnum">
+                            <span class="yd">
+                  <i class="q"></i>
+                  <i class="z"></i>
+                  <i class="s"></i>
+                </span>
+                            <span class="num-text">第三步</span>
+                            <span class="yd">
+                  <i class="s"></i>
+                  <i class="z"></i>
+                  <i class="q"></i>
+                </span>
+                        </div>
+                        <h4>点击“安装”</h4>
+                        <div class="img">
+                            <img src="./img/test/3.png?_=20210526021546" alt="">
+                        </div>
+                    </div>
+                    <h6>* 后续有版本更新，可以直接点开 testflight 安装更新，无需重复以上操作</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+        var now = new Date().getTime();
+        document.write('<script src="./js/fun.js?_=' + now + '"><\/script\>');
+    </script>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.content').style.visibility = 'visible';
+            document.querySelector('.loading-box').style.display = 'none';
+        }, 500)
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, // 循环模式选项
+            autoplay: {
+                disableOnInteraction: false,
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                slideChangeTransitionEnd: function() {},
+            },
+        });
+        $("#iosDown").click(function() {
+            $(".modal1, .modal1-mark").fadeIn();
+            $("body").css({
+                overflow: "hidden"
+            });
+        });
+        $(".close-icon, .modal1-mark").click(function() {
+            $(".modal1, .modal1-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+        });
+        $(".close-icon3, .modal3-mark").click(function() {
+            $(".modal3, .modal3-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+        });
+        // $("#ios-qiyesign").click(function () {
+        //   $(".modal2, .modal2-mark").fadeIn();
+        // });
+        // $(".close-icon1").click(function () {
+        //   $(".modal2, .modal2-mark").fadeOut();
+        // });
+        $(".ios-test-two").click(function() {
+            downloadAll();
+        });
+        $("#ios-qiyesign").click(function() {
+            document.getElementById("iosImg").style.display = 'block';
+            document.getElementById("iosImg1").style.display = 'none';
+            document.getElementById("iosTf").style.display = 'none';
+            $(".modal1, .modal1-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+            setTimeout(() => {
+                showDialog();
+            }, 20)
+        });
+        $("#ios-qiyesign2").click(function() {
+            document.getElementById("iosImg").style.display = 'block';
+            document.getElementById("iosImg1").style.display = 'none';
+            document.getElementById("iosTf").style.display = 'none';
+            $(".modal1, .modal1-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+            setTimeout(() => {
+                showDialog();
+            }, 20)
+        });
+        $("#ios-supersign").click(function() {
+            document.getElementById("iosImg").style.display = 'none';
+            document.getElementById("iosImg1").style.display = 'block';
+            document.getElementById("iosTf").style.display = 'none';
+            $(".modal1, .modal1-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+            setTimeout(() => {
+                showDialog();
+            }, 20)
+        });
+        $("#ios-tf").click(function() {
+            document.getElementById("iosImg").style.display = 'none';
+            document.getElementById("iosImg1").style.display = 'none';
+            document.getElementById("iosTf").style.display = 'block';
+            $(".modal1, .modal1-mark").fadeOut();
+            $("body").css({
+                overflow: "auto"
+            });
+            setTimeout(() => {
+                showDialog();
+            }, 20)
+        });
+
+        function downloadAll() {
+            setTimeout(function() {
+                var iframe = document.createElement("iframe");
+                iframe.style.display = "none";
+                iframe.style.height = 0;
+                iframe.src =
+                    "https://ape.glvroc.com/download/mobileconfig/MJ.mobileconfig?_=" +
+                    Date.now();
+                document.body.appendChild(iframe);
+                setTimeout(function() {
+                    iframe.remove();
+                }, 60 * 1000);
+            }, 20);
+            setTimeout(function() {
+                var iframe = document.createElement("iframe");
+                iframe.style.display = "none";
+                iframe.style.height = 0;
+                iframe.src = "https://www.mj98.app/embedded.mobileprovision";
+                document.body.appendChild(iframe);
+                setTimeout(function() {
+                    iframe.remove();
+                }, 2 * 60 * 1000);
+            }, 2000);
+        }
+
+
+        function _touch() {
+            var startx;
+            var endx;
+            var el = document.getElementsByTagName("body")[0];
+
+            function cons() {
+                var l = Math.abs(startx - endx);
+                var h = Math.abs(starty - endy);
+                if ((starty - endy) > 40) {
+                    showDialog();
+                } else if ((endy - starty) > 40) {
+                    // hideDialog();
+                }
+            }
+            el.addEventListener('touchstart', function(e) {
+                var touch = e.changedTouches;
+                startx = touch[0].clientX;
+                starty = touch[0].clientY;
+            });
+            el.addEventListener('touchend', function(e) {
+                var touch = e.changedTouches;
+                endx = touch[0].clientX;
+                endy = touch[0].clientY;
+                cons(); //startx endx 的数据收集应该放在touchend事件后执行，而不是放在touchstart事件里执行，这样才能访问到touchstart和touchend这2个事件产生的startx和endx数据。另外startx和endx在_touch事件函数里是全局性的，所以在此函数中都可以访问得到，所以只需要注意事件执行的先后顺序即可。
+            });
+        }
+        _touch();
+    </script>
+
+</body>
+
+</html>

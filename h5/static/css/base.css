@@ -1,0 +1,67 @@
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 13px "PingFang SC";
+  background: #fefffe;
+  -webkit-text-size-adjust: 100%;
+  color: #313131;
+  background: url('../images/bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #2d374b;
+  text-decoration: none;
+  outline: none;
+  appearance:none;
+  -webkit-tap-highlight-color: transparent; 
+}
+em {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  word-wrap: break-word;
+}
+
+.none {
+  display: none;
+}
+.block {
+  display: none;
+}

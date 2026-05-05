@@ -1,0 +1,187 @@
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background: url(../img/pcbg.jpg) 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: auto;
+    min-width: 1080px;
+    visibility: hidden;
+}
+
+.center {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftModel {
+    display: flex;
+    flex-direction: column;
+    min-width: 550px;
+}
+
+.pclogo {
+    width: 214px;
+    margin-bottom: 47px;
+}
+
+.leftModel .text1 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #0c0c0c;
+    line-height: 70px;
+}
+
+.leftModel .text1 .blue {
+    color: #FFBB00;
+}
+
+.leftModel .text2 {
+    height: 33px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 33px;
+}
+
+.leftModel .codemodel {
+    display: flex;
+    align-items: center;
+    margin-top: 67px;
+}
+
+.leftModel .codemodel .qrcode {
+    background-color: #fff;
+    box-shadow: 4px 4px 16px 0 rgb(0 0 0 / 10%);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftModel .codemodel .qrcode #img,
+.leftModel .codemodel .qrcode #img img {
+    width: 124px;
+    height: 124px;
+}
+
+.leftModel .codemodel .downloadApp {
+    margin-left: 21px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftModel .codemodel .downloadApp .s {
+    display: flex;
+    align-items: center;
+}
+
+.leftModel .codemodel .downloadApp .s .icon {
+    width: 22px;
+    height: 26px;
+    margin-right: 9px;
+}
+
+.leftModel .codemodel .downloadApp .s .ps {
+    color: #333;
+}
+
+.leftModel .codemodel .downloadApp .s .ps .p1 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 1px;
+    line-height: 18px;
+}
+
+.leftModel .codemodel .downloadApp .s .ps .p2 {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+}
+
+.leftModel .openBtn {
+    height: 56px;
+    margin-top: 20px;
+    border-radius: 12px;
+    width: 100%;
+    background: #0084AC;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: 0;
+    text-decoration: none;
+}
+
+.rightModel {
+    width: 550px;
+    height: 100vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 523px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    width: 523px;
+    height: 660px;
+}
+
+.swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    background: #dedede;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 16px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 9px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+    margin: 0;
+}

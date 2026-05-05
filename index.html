@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>名爵MJ98VIP官方 | 正版安装下载 | 赛车应用</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="友情链接：https://www.mj98.app/ 名爵官网 名爵房间号 体验高品质的mj98vip赛车。访问名爵mj98vip官网获取最新版本，享受安全稳定的游戏体验。  ">
+<meta name="keywords" content="友情链接：https://www.mj98.app/ 名爵官网 名爵房间号 体验高品质的mj98vip赛车。访问名爵mj98vip官网获取最新版本，享受安全稳定的游戏体验。">
+<meta name="robots" content="index, follow">
+<meta name="author" content="名爵官方">
+<style>
+:root {
+  --primary: #1a237e;
+  --primary-light: #303f9f;
+  --primary-dark: #0d1440;
+  --accent: #ffab00;
+  --accent-light: #ffd740;
+  --bg-light: #f5f7ff;
+  --bg-card: #ffffff;
+  --text-main: #1a1a1a;
+  --text-muted: #666;
+  --border: #e0e0e0;
+  --radius: 12px;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+}
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* 头部导航 */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 15px 0;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: bold; font-size: 20px;
+}
+.logo-text h1 { font-size: 20px; color: var(--primary-dark); }
+.logo-text p { font-size: 12px; color: var(--text-muted); }
+.nav-links { display: flex; gap: 25px; }
+.nav-links a {
+  font-size: 15px; font-weight: 500; color: var(--text-main);
+  transition: var(--transition); position: relative;
+}
+.nav-links a:hover { color: var(--primary); }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 0; height: 2px; background: var(--primary); transition: var(--transition);
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white; border: none; padding: 10px 20px;
+  border-radius: 20px; font-size: 14px; font-weight: 500;
+  cursor: pointer; transition: var(--transition); box-shadow: var(--shadow);
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(26, 35, 126, 0.3);
+}
+.mobile-toggle {
+  display: none; background: none; border: none;
+  font-size: 20px; cursor: pointer; color: var(--text-main);
+}
+.nav-panel { display: flex; align-items: center; gap: 25px; }
+
+/* 英雄区块 */
+.hero {
+  padding: 80px 0 50px;
+  background: linear-gradient(135deg, #f5f7ff 0%, #e8edff 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -50%; right: -10%;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(255, 171, 0, 0.05) 100%);
+  z-index: 0;
+}
+.hero-container {
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  gap: 40px; align-items: center; position: relative; z-index: 1;
+}
+.hero-content h1 {
+  font-size: 42px; line-height: 1.3; margin-bottom: 20px; color: var(--primary-dark);
+}
+.hero-content h1 span {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-content p {
+  font-size: 18px; color: var(--text-muted); margin-bottom: 30px; max-width: 600px;
+}
+.hero-keywords { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.keyword-tag {
+  background: white; border: 1px solid var(--border);
+  padding: 8px 16px; border-radius: 20px; font-size: 14px;
+  color: var(--text-main); transition: var(--transition);
+}
+.keyword-tag:hover {
+  border-color: var(--primary); color: var(--primary); box-shadow: var(--shadow);
+}
+.hero-actions { display: flex; gap: 15px; }
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white; border: none; padding: 14px 28px; border-radius: 8px;
+  font-weight: 500; cursor: pointer; transition: var(--transition);
+  box-shadow: var(--shadow); display: flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(26, 35, 126, 0.3);
+}
+.btn-secondary {
+  background: white; color: var(--primary); border: 1px solid var(--primary);
+  padding: 14px 28px; border-radius: 8px; font-weight: 500;
+  cursor: pointer; transition: var(--transition);
+  display: flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { background: var(--primary); color: white; }
+
+/* 公告栏 */
+.notice-card {
+  background: linear-gradient(145deg, #f0f2f5 0%, #e4e7ec 50%, #f5f7fa 100%);
+  border-radius: var(--radius); padding: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+.notice-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(26, 35, 126, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 171, 0, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+.notice-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 15px; padding-bottom: 12px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.4);
+  position: relative; z-index: 1;
+}
+.notice-title {
+  font-size: 20px; font-weight: 700;
+  color: #c62828;
+  text-shadow: 0 0 8px rgba(198, 40, 40, 0.3);
+  letter-spacing: 2px;
+}
+.notice-body {
+  height: 260px; overflow: hidden; position: relative;
+}
+.notice-scroll {
+  animation: scrollUp 15s linear infinite;
+  position: relative; z-index: 1;
+}
+.notice-scroll:hover {
+  animation-play-state: paused;
+}
+.notice-scroll p {
+  padding: 12px 0; font-size: 18px; color: #333;
+  line-height: 1.7; border-bottom: 1px dashed rgba(150, 150, 150, 0.3);
+  font-weight: 500;
+}
+.notice-scroll p:last-child { border-bottom: none; }
+.report-btn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.4);
+}
+.report-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(220, 38, 38, 0.6);
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* 通用区块样式 */
+section { padding: 80px 0; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-eyebrow {
+  font-size: 14px; color: var(--primary);
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+}
+h2.section-title { font-size: 36px; color: var(--primary-dark); margin-bottom: 20px; }
+.section-subtitle {
+  font-size: 18px; color: var(--text-muted); max-width: 700px; margin: 0 auto;
+}
+
+/* 内容区块 */
+.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.card {
+  background: white; border-radius: var(--radius); padding: 30px;
+  box-shadow: var(--shadow); border: 1px solid var(--border); transition: var(--transition);
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); }
+.card h3 { font-size: 22px; color: var(--primary-dark); margin-bottom: 15px; }
+.card p { color: var(--text-muted); margin-bottom: 15px; line-height: 1.7; }
+.card ul { margin-left: 20px; margin-bottom: 15px; }
+.card li { margin-bottom: 8px; color: var(--text-muted); }
+.tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.tag {
+  background: var(--bg-light); color: var(--primary);
+  padding: 6px 12px; border-radius: 20px; font-size: 12px;
+}
+
+/* 特色服务 */
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.feature-item {
+  background: white; border-radius: var(--radius); padding: 30px;
+  box-shadow: var(--shadow); border: 1px solid var(--border);
+  transition: var(--transition); text-align: center;
+}
+.feature-item:hover {
+  transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.feature-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--bg-light); display: flex; align-items: center; justify-content: center;
+  font-size: 24px; color: var(--primary); margin: 0 auto 20px;
+}
+.feature-item h3 { font-size: 20px; color: var(--primary-dark); margin-bottom: 15px; }
+.feature-item p { color: var(--text-muted); font-size: 15px; margin-bottom: 15px; line-height: 1.6; }
+.feature-tag {
+  background: var(--accent-light); color: #7c6300;
+  padding: 6px 12px; border-radius: 20px; font-size: 12px; display: inline-block;
+}
+
+/* 为什么选择我们 */
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.why-list { list-style: none; }
+.why-list li { display: flex; gap: 15px; margin-bottom: 25px; }
+.why-bullet {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--primary); color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; flex-shrink: 0;
+}
+.why-content h4 { font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; }
+.why-content p { color: var(--text-muted); font-size: 15px; line-height: 1.6; }
+.highlight-card {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  border-radius: var(--radius); padding: 30px; border: 1px solid #ffd54f;
+}
+.highlight-card h3 { font-size: 22px; color: #7c6300; margin-bottom: 15px; }
+.highlight-card p { color: #7c6300; font-size: 15px; line-height: 1.6; margin-bottom: 15px; }
+
+/* APP下载指南 */
+.download-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.download-card h3 { font-size: 22px; color: var(--primary-dark); margin-bottom: 15px; }
+.download-card p { color: var(--text-muted); margin-bottom: 15px; line-height: 1.7; }
+.download-card ul { margin-left: 20px; margin-bottom: 20px; }
+.download-card li { color: var(--text-muted); margin-bottom: 8px; }
+.download-buttons { display: flex; gap: 15px; margin-bottom: 15px; }
+.download-note { font-size: 13px; color: var(--text-muted); }
+.qr-box {
+  background: white; border-radius: var(--radius); padding: 25px;
+  text-align: center; box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+.qr-placeholder {
+  width: 180px; height: 180px; margin: 0 auto 15px; border-radius: 10px;
+  background: #f3f4f6; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: var(--text-muted); border: 1px dashed var(--border);
+}
+
+/* 客服支持卡片 */
+.service-support-card {
+  background: white; border-radius: var(--radius); padding: 30px;
+  box-shadow: var(--shadow); text-align: center; margin-top: 20px;
+  border: 1px solid var(--border);
+}
+.service-support-card h3 { font-size: 22px; color: var(--primary-dark); margin-bottom: 15px; }
+.service-support-main { margin-bottom: 20px; line-height: 1.6; }
+.service-support-row { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px; }
+.service-support-id { font-weight: 600; color: var(--primary-dark); }
+.btn-chip {
+  background: white; border: 1px solid var(--border);
+  padding: 8px 16px; border-radius: 20px; font-size: 14px;
+  cursor: pointer; transition: var(--transition);
+}
+.btn-chip:hover { border-color: var(--primary); color: var(--primary); }
+.service-support-tip {
+  font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6;
+}
+
+/* 玩法规则 */
+.rules-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.rules-tip {
+  background: #fff8e1; border: 1px solid #ffd54f;
+  border-radius: 8px; padding: 15px; margin-top: 15px;
+}
+.rules-tip strong { color: #7c6300; }
+
+/* FAQ */
+.faq-wrapper { max-width: 800px; margin: 0 auto; }
+details.faq-item {
+  background: white; border-radius: var(--radius); padding: 25px;
+  margin-bottom: 15px; box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+summary {
+  font-weight: 600; color: var(--primary-dark); cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+}
+summary::-webkit-details-marker { display: none; }
+.faq-icon { font-size: 18px; color: var(--primary); }
+.faq-body { margin-top: 15px; color: var(--text-muted); line-height: 1.6; }
+
+/* 联系方式 */
+.contact-card {
+  background: white; border-radius: var(--radius); padding: 30px;
+  box-shadow: var(--shadow); border: 1px solid var(--border);
+}
+.contact-row { display: flex; gap: 30px; margin-bottom: 20px; }
+.contact-item { flex: 1; }
+.contact-label { font-size: 15px; color: var(--primary-dark); font-weight: 600; margin-bottom: 5px; }
+.contact-note {
+  background: #fff8e1; border: 1px solid #ffd54f;
+  border-radius: 8px; padding: 15px; color: #7c6300;
+  font-size: 14px; line-height: 1.6;
+}
+
+/* 页脚 */
+footer {
+  background: var(--primary-dark); color: white;
+  padding: 50px 0 20px;
+}
+.footer-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { color: #d1d5db; transition: var(--transition); }
+.footer-links a:hover { color: white; }
+.footer-bottom {
+  text-align: center; padding-top: 20px;
+  border-top: 1px solid #374151; color: #9ca3af; font-size: 14px;
+}
+
+/* 回到顶部按钮 */
+.back-to-top {
+  position: fixed; bottom: 30px; right: 30px;
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--primary); color: white;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; visibility: hidden;
+  transition: var(--transition); box-shadow: var(--shadow); z-index: 99;
+}
+.back-to-top.show { opacity: 1; visibility: visible; }
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-panel { display: none; }
+  .nav-panel.open {
+    display: block; position: absolute; top: 100%; left: 0; right: 0;
+    background: #ffffff; padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+  .nav-panel.open .nav-links { display: flex; flex-direction: column; gap: 15px; }
+  .nav-panel.open .nav-cta { display: block; width: 100%; margin-top: 12px; }
+  .hero-container { grid-template-columns: 1fr; }
+  .content-grid, .why-grid, .download-layout, .rules-layout { grid-template-columns: 1fr; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .contact-row { flex-direction: column; gap: 15px; }
+  .hero-content h1 { font-size: 32px; }
+  h2.section-title { font-size: 28px; }
+  .info-grid { grid-template-columns: 1fr; }
+  .download-buttons { flex-direction: column; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+  .service-support-row { flex-direction: column; }
+  .footer-row { flex-direction: column; gap: 15px; text-align: center; }
+  .footer-links { justify-content: center; }
+  section { padding: 60px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- 头部导航 -->
+<header>
+  <div class="container">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">MJ</div>
+        <div class="logo-text">
+          <h1>名爵MJ98VIP官方</h1>
+          <p>正版安装下载 · 赛车体验</p>
+        </div>
+      </div>
+      <div id="navPanel" class="nav-panel">
+        <div class="nav-links">
+          <a href="#intro">介绍</a>
+          <a href="#services">特色功能</a>
+          <a href="#why-us">选择理由</a>
+          <a href="#download">APP下载</a>
+          <a href="#rules">玩法指南</a>
+          <a href="#faq">常见问题</a>
+          <a href="#contact">联系我们</a>
+        </div>
+       <a href="https://www.baidu.com" target="_blank"> <button class="nav-cta">名爵房间号：222780</button></a>
+      </div>
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="navPanel">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- 英雄区块 + 信息速览 -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>体验<span>名爵MJ98VIP</span>官方，畅享高品质赛车</h1>
+
+        <p>友情链接：<a href="https://www.mj98.app/" target="_blank">名爵官网</a>  名爵举报平台 体验高品质的mj98vip赛车。访问名爵mj98vip官网获取最新版本，享受安全稳定的游戏体验。 </p>
+        <div class="hero-keywords">
+
+
+        </div>
+<div class="hero-actions">
+
+<a href="https://www.baidu.com" target="_blank">
+    <button class="btn-secondary">
+        <span>🔍</span> 名爵旗下房间号:222780
+    </button>
+</a>
+        </div>
+      </div>
+      <div class="notice-card">
+        <div class="notice-header">
+          <div class="notice-title">📢 黑房榜</div>
+        </div>
+        <div class="notice-body">
+          <div class="notice-scroll" id="noticeScroll">
+            <p>🔥 在此栏目出现的房间号均由玩家举报！</p>
+            <p>名爵房间号：🏎️ 898884（黑房）</p>
+            <p>名爵房间号：🏎️ 932625（黑房）</p>
+<p>名爵房间号：🏎️ 080530（黑房）</p>
+<p>名爵房间号：🏎️ 177867（黑房）</p>
+<p>名爵房间号：🏎️ 100000（黑房）</p>
+<p>名爵房间号：🏎️ 307718（黑房）</p>
+<p>名爵房间号：🏎️ 810909（黑房）</p>
+<p>名爵房间号：🏎️ 481999（黑房）</p>
+<p>名爵房间号：🏎️ 860729（黑房）</p>
+<p>名爵房间号：🏎️ 128146（黑房）</p>
+<p>名爵房间号：🏎️ 050996（黑房）</p>
+            <p>⭐ 守护自己的钱包，请勿到黑房中娱乐。</p>
+          </div>
+        </div>
+        <a href="https://vdh6qunb.jsjform.com/f/J7UG7e/" target="_blank" class="report-btn">举报入口</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 内容区：介绍 -->
+<section id="intro">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">INTRODUCTION</div>
+      <h2 class="section-title">名爵MJ98VIP介绍</h2>
+      <p class="section-subtitle">名爵MJ98VIP是一款高品质的应用，提供丰富的内容和流畅的用户体验，是您休闲的理想选择。</p>
+    </div>
+    <div class="content-grid">
+      <article class="card">
+        <h3>名爵app特点</h3>
+        <p>名爵app作为一款专业的，致力于为用户提供安全、稳定、丰富的体验。通过名爵mj98vip正版安装，您可以享受到的全部功能。</p>
+        <p>采用先进的技术架构，确保运行流畅稳定，同时提供多种选项，满足不同用户的需求。</p>
+        <ul>
+          <li>名爵mj98vip官网提供最新版本下载</li>
+          <li>mj98vip名爵下载过程简单快捷</li>
+          <li>名爵mj98vip正版安装保障安全</li>
+          <li>丰富的mj98vip赛车内容</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">名爵app</span>
+          <span class="tag">名爵mj98vip</span>
+          <span class="tag">正版安装</span>
+        </div>
+      </article>
+      <article class="card">
+        <h3>安全保障</h3>
+        <p>名爵MJ98VIP高度重视用户安全和隐私保护，采用多重安全措施确保用户信息和安全。</p>
+        <p>我们建议用户仅通过名爵mj98vip官网进行mj98vip名爵下载，避免使用非官方渠道，以确保获得正版应用和最新功能。</p>
+        <ul>
+          <li>官方渠道下载保障应用安全</li>
+          <li>数据加密传输保护用户隐私</li>
+          <li>定期安全更新防范风险</li>
+          <li>专业客服团队提供技术支持</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">安全保障</span>
+          <span class="tag">官方渠道</span>
+          <span class="tag">隐私保护</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 特色服务区块 -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">FEATURES</div>
+      <h2 class="section-title">名爵MJ98VIP特色功能</h2>
+      <p class="section-subtitle">名爵app提供多种特色功能，满足不同用户的需求，打造全方位的体验。</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏎️</div>
+        <h3>mj98vip赛车</h3>
+        <p>体验刺激的赛车，多种赛事模式，逼真的视觉效果，带给您身临其境的体验。</p>
+        <span class="feature-tag">热门功能</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <h3>多兼容</h3>
+        <p>支持iOS和Android系统，通过名爵mj98vip正版安装，可在多种设备上流畅运行。</p>
+        <span class="feature-tag">广泛兼容</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <h3>安全稳定</h3>
+        <p>从名爵mj98vip官网下载正版应用，享受安全稳定的环境，保护您的个人信息。</p>
+        <span class="feature-tag">安全保障</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <h3>流畅体验</h3>
+        <p>优化后的应用性能，确保在各种网络环境下都能提供流畅的体验。</p>
+        <span class="feature-tag">性能优化</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎮</div>
+        <h3>丰富内容</h3>
+        <p>除了mj98vip赛车，还提供多种选项，满足不同用户的偏好和需求。</p>
+        <span class="feature-tag">内容多样</span>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🆕</div>
+        <h3>持续更新</h3>
+        <p>定期通过名爵mj98vip官网发布更新，增加新功能，优化用户体验。</p>
+        <span class="feature-tag">持续改进</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 为什么选择我们 -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">WHY CHOOSE US</div>
+      <h2 class="section-title">选择名爵MJ98VIP的理由</h2>
+      <p class="section-subtitle">名爵app凭借其卓越的性能和丰富的功能，成为众多用户的首选。</p>
+    </div>
+    <div class="why-grid">
+      <div class="card">
+        <div class="why-card-title">我们的优势</div>
+        <ul class="why-list">
+          <li>
+            <div class="why-bullet">1</div>
+            <div class="why-content">
+              <h4>官方正版保障</h4>
+              <p>通过名爵mj98vip官网下载正版应用，确保软件安全无毒，功能完整，避免使用盗版应用的风险。</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-bullet">2</div>
+            <div class="why-content">
+              <h4>流畅的mj98vip赛车体验</h4>
+              <p>优化的游戏引擎确保赛车流畅运行，精美的画面和逼真的效果带来沉浸式体验。</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-bullet">3</div>
+            <div class="why-content">
+              <h4>简单便捷的安装过程</h4>
+              <p>mj98vip名爵下载和名爵mj98vip正版安装过程简单明了，即使是新手用户也能轻松完成。</p>
+            </div>
+          </li>
+          <li>
+            <div class="why-bullet">4</div>
+            <div class="why-content">
+              <h4>持续的技术支持</h4>
+              <p>专业客服团队提供全天候技术支持，解决用户在使用名爵app过程中遇到的任何问题。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="highlight-card">
+        <h3>重要提示</h3>
+        <p>为确保您的使用体验和安全，请务必通过名爵mj98vip官网进行mj98vip名爵下载，完成名爵mj98vip正版安装。</p>
+        <p>避免使用第三方渠道下载应用，以防安装篡改版本或恶意软件，保护您的设备和个人信息安全。</p>
+        <p>定期检查名爵app更新，通过官方渠道获取最新版本，享受新增功能和性能优化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP 下载指南 -->
+<section id="download">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">DOWNLOAD</div>
+      <h2 class="section-title">名爵APP下载指南</h2>
+      <p class="section-subtitle">按照以下指南完成名爵app的下载和安装，开始您的体验。</p>
+    </div>
+    <div class="download-layout">
+      <div class="card download-card">
+        <h3>名爵APP下载步骤</h3>
+        <p>为确保安全，请仅通过官方渠道进行名爵mj98vip正版安装：</p>
+        <ul>
+          <li>访问名爵mj98vip官网获取最新版本</li>
+          <li>选择与您设备匹配的版本（iOS或Android）</li>
+          <li>点击mj98vip名爵下载按钮开始下载</li>
+          <li>下载完成后按照提示完成安装</li>
+          <li>打开名爵app，注册或登录账户</li>
+          <li>开始体验mj98vip赛车等功能</li>
+        </ul>
+        <div class="download-buttons">
+          <a class="btn-primary" href="./1/index.html" target="_blank" rel="noopener noreferrer">
+            <span>⬇️</span> Android版下载
+          </a>
+          <a class="btn-secondary" href="./1/index.html" target="_blank" rel="noopener noreferrer">
+            <span>⬇️</span> iOS版下载
+          </a>
+        </div>
+        <div class="download-note">注意：请确保从名爵mj98vip官网下载正版应用，避免使用第三方渠道，以防安全风险。</div>
+      </div>
+      <div>
+        <div class="service-support-card">
+          <h3>安装问题支持</h3>
+          <p class="service-support-main">如果在名爵mj98vip正版安装过程中遇到任何问题，我们的技术支持团队随时为您提供帮助。</p>
+          <div class="service-support-row">
+            <span class="service-support-id">与你APP客服ID：<span id="customerId">MJKF01</span></span>
+            <button id="copyCustomerId" class="btn-chip">复制号码</button>
+          </div>
+          <p class="service-support-tip">服务时间：7x24小时服务，我们的专业客服将协助您解决名爵app安装和使用过程中的问题。</p>
+          <div style="display:flex;justify-content:center;">
+            <a class="btn-primary" href="https://www.yuni.com.cn/index.html" target="_blank" rel="noopener noreferrer"><span>⬇️</span> 与你APP下载</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 玩法指南 -->
+<section id="rules">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">GUIDE</div>
+      <h2 class="section-title">名爵APP使用指南</h2>
+      <p class="section-subtitle">了解名爵app的基本功能和操作方法，充分利用提供的各种选项。</p>
+    </div>
+    <div class="rules-layout">
+      <article class="card">
+        <h3>基本操作指南</h3>
+        <ol>
+          <li>完成名爵mj98vip正版安装后，打开应用</li>
+          <li>注册新账户或登录现有账户</li>
+          <li>浏览提供的各种选项</li>
+          <li>选择感兴趣的内容，如mj98vip赛车</li>
+          <li>熟悉操作界面和功能按钮</li>
+          <li>根据个人偏好调整设置</li>
+        </ol>
+        <h3>mj98vip赛车玩法</h3>
+        <ol>
+          <li>进入赛车区域</li>
+          <li>选择喜欢的赛事模式</li>
+          <li>熟悉赛道和车辆控制</li>
+          <li>参与比赛，体验竞速乐趣</li>
+          <li>查看成绩和排行榜</li>
+        </ol>
+        <div class="rules-tip">
+          <strong>提示：</strong>初次使用建议先熟悉基本操作，逐步探索更多功能，享受名爵app带来的体验。
+        </div>
+      </article>
+      <article class="card">
+        <h3>高级功能探索</h3>
+        <p>熟悉基本操作后，您可以探索名爵app的更多高级功能：</p>
+        <ul>
+          <li>个性化设置：根据偏好调整界面和操作方式</li>
+          <li>社交功能：与好友互动，分享体验</li>
+          <li>成就系统：完成挑战，解锁特殊奖励</li>
+          <li>活动参与：定期更新的特别活动和赛事</li>
+          <li>数据统计：查看个人表现和改进空间</li>
+        </ul>
+        <div class="rules-tip">
+          定期访问名爵mj98vip官网检查更新，获取最新功能和性能优化，提升您的使用体验。
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-title">常见问题解答</h2>
+      <p class="section-subtitle">以下是用户在使用名爵app过程中经常遇到的问题和解答。</p>
+    </div>
+    <div class="faq-wrapper">
+      <details class="faq-item" open>
+        <summary>
+          <span>Q1：如何确保下载的是名爵app正版？</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-body">
+          为确保下载的是名爵app正版，请务必通过<strong>名爵mj98vip官网</strong>进行<strong>mj98vip名爵下载</strong>。避免使用第三方应用商店或不明来源的链接，以防安装篡改版本或恶意软件。正版名爵app具有官方数字签名和安全认证。
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Q2：名爵mj98vip正版安装需要注意什么？</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-body">
+          进行<strong>名爵mj98vip正版安装</strong>时，请注意：<br>
+          1. 确保设备有足够的存储空间<br>
+          2. 允许安装来自官方来源的应用（Android设备需开启"允许安装未知来源"）<br>
+          3. 仔细阅读安装过程中的权限请求<br>
+          4. 安装完成后，建议重启设备以确保应用正常运行
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Q3：mj98vip赛车有哪些特色？</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-body">
+          <strong>mj98vip赛车</strong>作为名爵app的特色功能，具有以下特点：<br>
+          - 多种赛车模式和赛道选择<br>
+          - 逼真的物理引擎和视觉效果<br>
+          - 丰富的车辆定制选项<br>
+          - 在线多人竞技功能<br>
+          - 定期更新的赛事和活动
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>Q4：如何联系名爵app客服？</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <div class="faq-body">
+          如果您在使用名爵app过程中遇到问题，可以通过以下方式联系客服：<br>
+          1. 应用内帮助中心提交问题<br>
+          2. 联系【与你APP】客服：MJKF01<br>
+          3. 发送邮件至官方支持邮箱<br>
+          4. 访问名爵mj98vip官网的客服专区<br><br>
+          客服团队将为您提供专业的技术支持和问题解答。
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 联系方式 -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-eyebrow">CONTACT</div>
+      <h2 class="section-title">联系我们</h2>
+      <p class="section-subtitle">如果您对名爵app有任何疑问或需要技术支持，请通过以下方式与我们联系。</p>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="contact-item">
+          <div class="contact-label">与你APP客服ID：</div>
+          <div>MJKF01</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">服务时间</div>
+          <div>7x24小时服务</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">官方网站</div>
+          <div>名爵mj98vip官网</div>
+        </div>
+      </div>
+      <div class="contact-note">
+        <strong>重要提示：</strong><br>
+        1. 请仅通过名爵mj98vip官网进行mj98vip名爵下载，确保安装正版应用。<br>
+        2. 如有任何名爵app使用问题，我们的客服团队将提供专业支持。<br>
+        3. 定期访问官网获取最新版本和功能更新。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div>© <span id="year"></span> 名爵MJ98VIP官方 · 名爵房间号：222780</div>
+      <div class="footer-links">
+        与你APP客服ID：MJKF01
+      </div>
+    </div>
+    <div class="footer-bottom">
+      友情链接：<a href="https://www.mj98.app/" target="_blank">名爵官网</a>、<a href="https://www.mjjb98.vip/" target="_blank">名爵举报入口</a>、<a href="https://www.mj98.app/" target="_blank">名爵app下载</a>、<a href="https://www.mj98.app/" target="_blank">mj98.vip</a>、均为官方信息，仅供用户参考。
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部按钮 -->
+<div id="backToTop" class="back-to-top">↑</div>
+
+<script>
+const mobileToggle = document.querySelector('.mobile-toggle');
+const navPanel = document.getElementById('navPanel');
+mobileToggle.addEventListener('click', function() {
+  const isOpen = navPanel.classList.toggle('open');
+  mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+document.addEventListener('click', function(e) {
+  if (window.innerWidth <= 768 && navPanel.classList.contains('open')) {
+    if (!navPanel.contains(e.target) && !mobileToggle.contains(e.target)) {
+      navPanel.classList.remove('open');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+});
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 768 && navPanel.classList.contains('open')) {
+    navPanel.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+// 页脚年份
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// 回到顶部按钮
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) { backToTop.classList.add('show'); }
+  else { backToTop.classList.remove('show'); }
+});
+backToTop.addEventListener('click', function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 复制客服号码
+document.getElementById('copyCustomerId').addEventListener('click', function() {
+  const customerId = document.getElementById('customerId').textContent;
+  const textArea = document.createElement('textarea');
+  textArea.value = customerId;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+  const originalText = this.textContent;
+  this.textContent = '已复制';
+  setTimeout(() => { this.textContent = originalText; }, 2000);
+});
+
+// 平滑滚动
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      window.scrollTo({ top: targetElement.offsetTop - 80, behavior: 'smooth' });
+      if (window.innerWidth <= 768) {
+        navPanel.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+});
+
+// 按钮点击效果
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+  button.addEventListener('click', function() {
+    this.style.transform = 'scale(0.95)';
+    setTimeout(() => { this.style.transform = ''; }, 150);
+  });
+});
+
+// 复制房间号
+function copyRoomNum() {
+  const roomNum = '222780';
+  const textArea = document.createElement('textarea');
+  textArea.value = roomNum;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textArea);
+  const btn = document.getElementById('roomBtn');
+  const originalHTML = btn.innerHTML;
+  btn.innerHTML = '<span>✅</span> 已复制';
+  setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
+}
+</script>
+
+   
+
+    <!-- 右下角客服链接 -->
+、
+</body>
+</html>

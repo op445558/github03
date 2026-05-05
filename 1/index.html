@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>名爵应用下载</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/pc.css?v=20231117164802" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link type="image/x-icon" href="./img/icon.png?v=20231117164802" rel="icon" />
+    <link rel="shortcut icon" sizes="192x192" href="./img/icon.png?v=20231117164802" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./img/icon.png?v=20231117164802" />
+    <script src="./js/loading-component.js"></script>
+    <style type="text/css">
+        .loading-box {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            background-color: #fff;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            z-index: 9999999;
+        }
+
+        .room-number {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hjh {
+            color: #ff663b;
+        }
+    </style>
+    <!-- js -->
+    <script type="text/javascript">
+        // 判断pc h5
+        var isPhone = window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+        if (window.location.href.indexOf('mobile') !== -1) {
+            if (window.innerWidth > 750) {
+                window.location.href = "./index.html"
+            }
+        } else {
+            if (window.innerWidth < 750) {
+                window.location.href = "./mobile.html"
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        window["document"]["write"]('<div class="loading-box" id="loading-box"><div id="loading" class="loading_index"></div></div>');
+        document.addEventListener('DOMContentLoaded', () => {
+            window.LoadingRef = new window.LoadingComponent({
+                loading: true,
+                size: 180,
+                startDeg: 1.5,
+                endDeg: 3.5,
+                innerLineDash: false,
+                counterclockwise: false,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="content">
+            <div class="center">
+                <div class="leftModel">
+                    <img class="pclogo" src="img/logo.png" />
+                    <div class="room-number">房间号: <span class="hjh">222780</span></div>
+                    <span id="text1" class="text1">
+							<span>千万彩友的</span><span class="blue">选择</span>
+                    </span>
+                    <span id="text2" class="text2">热门彩种 应有尽有</span>
+                    <div class="codemodel">
+                        <div class="qrcode">
+                            <div id="img"></div>
+                        </div>
+                        <div class="downloadApp">
+                            <div class="s" style="margin-bottom: 36px;">
+                                <img class="icon" src="./img/IOS.png" />
+                                <div class="ps">
+                                    <p class="p1">iOS</p>
+                                    <p class="p2">iOS 12 或以上</p>
+                                </div>
+                            </div>
+                            <div class="s">
+                                <img class="icon" src="./img/Android.png" />
+                                <div class="ps">
+                                    <p class="p1">Android</p>
+                                    <p class="p2">安卓 7.0 或以上</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="openBtn" target="_blank" href="../h5/index.html">进入导航网</a>
+                </div>
+                <!-- 轮播 -->
+                <div class="rightModel">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/pc1.webp" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/pc2.webp" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/pc3.webp" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/qrcode.js"></script>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/fun.js"></script> -->
+    <script>
+        setTimeout(function() {
+            document.querySelector('.content').style.visibility = 'visible';
+            document.querySelector('.loading-box').style.display = 'none';
+        }, 500)
+        // 轮播初始化
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            autoplay: {
+                disableOnInteraction: false,
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                slideChangeTransitionEnd: function() {
+                    if (this.activeIndex === 0) {
+                        document.getElementById("text1").innerHTML = `<span>千万彩友的</span><span class="blue">选择</span>`;
+                        document.getElementById("text2").innerHTML = `热门彩种 应有尽有`;
+                    } else if (this.activeIndex === 1) {
+                        document.getElementById("text1").innerHTML = `<span>互动交流 </span><span class="blue">群组下注</span>`;
+                        document.getElementById("text2").innerHTML = `内置键盘 操作简单`;
+                    } else if (this.activeIndex === 2) {
+                        document.getElementById("text1").innerHTML = `<span class="blue">预测</span><span>计划</span> <span>开奖</span><span class="blue">直播</span>`;
+                        document.getElementById("text2").innerHTML = `功能强大 一应俱全`;
+                    }
+                },
+            },
+        });
+
+        new QRCode(document.getElementById('img'), {
+            text: window.location.href,
+            width: 124,
+            height: 124,
+        });
+    </script>
+
+</body>
+
+</html>
