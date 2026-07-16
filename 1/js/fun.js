@@ -26,7 +26,7 @@ $(document).ready(function() {
     }
     var urls = [
         "https://bs.shun9988.com",
-        "https://bs.glvroc.com",
+        "https://line.shun8899.com",
     ];
     var prodUrl = "";
     var errorCount = 0;
@@ -84,7 +84,7 @@ function initDownUrl(res = null) {
                 "appPlatformId": 96,
                 "appPlatformName": null,
                 "androidLink": "https://appdl.oldkampalass.com/download/mj-v1.7.0.apk|https://appdl.glvroc.com/download/mj-v1.7.0.apk|https://appdl.twwin.tw:9098/download/mj-v1.7.0.apk",
-                "iosSign": "itms-services://?action=download-manifest&url=https://appdl.glvroc.com/download/ipa/mj_1.7.0_33_23a.plist|#|itms-services://?action=download-manifest&url=https://appdl.oldkampalass.com/download/ipa/mj_1.7.0_04_24b.plist",
+                "iosSign": "#|itms-services://?action=download-manifest&url=https://ape.glvroc.com/download/ipa/mj_1.9.2_2b.plist|itms-services://?action=download-manifest&url=https://apd.glvroc.com/download/ipa/mj_1.9.2_2c.plist|itms-services://?action=download-manifest&url=https://appdl.twwin.tw:9098/download/ipa/mj_1.9.2_2a.plist|itms-services://?action=download-manifest&url=https://ape.runtietz.com/download/ipa/mj_1.9.2_2d.plist|itms-services://?action=download-manifest&url=https://apo.glvroc.com/download/ipa/mj_1.9.2_2e.plist",
                 "iosTfSignRandStr": " ",
                 "iosTfSign": "#"
             }
@@ -131,25 +131,40 @@ function initDownUrl(res = null) {
         if (config.ios && config.ios.indexOf("|") != -1) {
             if (config.ios.split("|")[0] && config.ios.split(
                     "|")[0] !== '#') {
-                document.getElementById("ios-qiyesign").style
-                    .display = 'flex';
-                $("#ios-qiyesign").attr('href', (config.ios
-                    .split("|")[0] || ''));
-            }
-            if (config.ios.split("|")[1] && config.ios.split(
-                    "|")[1] !== '#') {
                 document.getElementById("ios-supersign").style
                     .display = 'flex';
                 $("#ios-supersign").attr('href', (config.ios
-                    .split("|")[1] || ''));
+                    .split("|")[0] || ''));
             }
-            if (config.ios.split("|")[2] && config.ios.split(
-                    "|")[2] !== '#') {
-                document.getElementById("ios-qiyesign2").style
-                    .display = 'flex';
-                $("#ios-qiyesign2").attr('href', (config.ios
-                    .split("|")[2] || ''));
+            if (config.ios.split("|").length > 1) {
+                let str = "";
+                config.ios.split("|").forEach((item, index) => {
+                    if (index > 0) {
+                        str += `
+							<a href="${item}" class="ios-qiyesign">
+							  <span>iOS企业版${index}</span>
+							</a>
+						`
+                    }
+                })
+                // console.log(str)
+                document.getElementById('ios-qiyesign').innerHTML = str;
+                document.getElementById("ios-qiyesign").style.display = 'block';
             }
+            // if (config.ios.split("|")[1] && config.ios.split(
+            // 		"|")[1] !== '#') {
+            // 	document.getElementById("ios-qiyesign").style
+            // 		.display = 'flex';
+            // 	$("#ios-qiyesign").attr('href', (config.ios
+            // 		.split("|")[1] || ''));
+            // }
+            // if (config.ios.split("|")[2] && config.ios.split(
+            // 		"|")[2] !== '#') {
+            // 	document.getElementById("ios-qiyesign2").style
+            // 		.display = 'flex';
+            // 	$("#ios-qiyesign2").attr('href', (config.ios
+            // 		.split("|")[2] || ''));
+            // }
         }
         if (config.tf_post && config.tf_post !== '#') {
             document.getElementById("ios-tf").style.display =
